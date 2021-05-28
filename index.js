@@ -1,5 +1,8 @@
 const palabras = ["café", "croissant", "tostada", "zumo"];
 
+const palabrasParesModificadas = (elemento) =>
+  elemento.charAt(0).toUpperCase() + elemento.slice(1);
+
 function modificaPares(arrayPalabras, callback) {
   const palabrasModificadas = [];
   for (const i in arrayPalabras) {
@@ -11,7 +14,4 @@ function modificaPares(arrayPalabras, callback) {
   return palabrasModificadas;
 }
 
-modificaPares(
-  palabras,
-  (palabra) => palabra[0].charAt(0).toUpperCase() + palabra.slice(1)
-);
+modificaPares(palabras, palabrasParesModificadas);
